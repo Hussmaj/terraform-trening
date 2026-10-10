@@ -42,10 +42,6 @@ terraform apply: Utfører koden og bygger infrastrukturen i praksis.
 terraform destroy: Sletter alt koden har bygget og stopper eventuelle kostnader.  
 terraform.tfstate: Lært at dette er "hjernen" (state-filen) til Terraform som man aldri må slette manuelt.  
 
-## 4. Veien videre / Neste steg
+## Sammendrag:
 
-Koble WSL-terminalen opp mot en ekte AWS-konto ved hjelp av miljøvariabler for Access Keys (AWS_ACCESS_KEY_ID og AWS_SECRET_ACCESS_KEY).  
-Gjøre om main.tf fra å lage en lokal tekstfil til å rulle ut en ekte, virtuell Linux-server (EC2-instans) i AWS sitt datasenter i Stockholm.  
-
-Sammendrag:
 Jeg har installert og lært det grunnleggende i Terraform gjennom WSL-terminalen. Jeg har også jobbet med å skrive og endre HCL-kode, feilsøke og rette tilgangsrettigheter i AWS IAM, samt sette opp og rydde opp etter en skyserver.
