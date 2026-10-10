@@ -26,12 +26,11 @@ AWS-integrasjon og feilsøking:
 Koblet terminalen opp mot AWS ved bruk av miljøvariabler for Access Keys (`AWS_ACCESS_KEY_ID` og `AWS_SECRET_ACCESS_KEY`).
 Endret koden til å rulle ut en EC2-instans i regionen `eu-north-1` (Stockholm).
 
-Feilsøking 1 (InvalidAMIID):
-Løst feilmelding ved å oppdatere til en rykende fersk og gyldig AMI-ID for Ubuntu 24.04 LTS.
-Feilsøking 2 (UnauthorizedOperation):
-Løst tilgangsfeil (403 Forbidden) for AWS-brukeren `hussein` ved å gå inn i AWS IAM-konsollen og tildele rettigheten `AmazonEC2FullAccess`.
-Suksessfull utrulling:
-Koden kjørte feilfritt etter rettighetsendringen, og en ekte skyserver ble opprettet.
+
+**Feilsøking:**  Rettet feil knyttet til en ugyldig AMI-ID ved å oppdatere til en gyldig Ubuntu 24.04 LTS-versjon.   
+Jeg løste også tilgangsproblemer i AWS IAM ved å oppdatere nødvendige rettigheter.
+
+**Oppsett av skyserver:**   Etter at feilene var rettet, kjørte koden som forventet, og jeg fikk opprettet en skyserver i AWS.  
 
 3. Viktige verktøy og kommandoer lært i dag
 terraform init: Klargjør mappen og laster ned plugins/providers.
@@ -46,9 +45,4 @@ Koble WSL-terminalen opp mot en ekte AWS-konto ved hjelp av miljøvariabler for 
 Gjøre om main.tf fra å lage en lokal tekstfil til å rulle ut en ekte, virtuell Linux-server (EC2-instans) i AWS sitt datasenter i Stockholm.
 
 Sammendrag:
-
-Jeg har installert og mestret Terraform i WSL-terminalen.
-Jeg har skrevet og modifisert HCL-kode.
-Jeg har feilsøkt og fikset ekte sky-rettigheter i AWS (IAM).
-Jeg har rullet ut (og ryddet opp) en ekte skyserver.
-Til slutt har jeg dokumentert alt i en profesjonell Markdown-journal og pushet det trygt til GitHub.
+Jeg har installert og lært det grunnleggende i Terraform gjennom WSL-terminalen. Jeg har også jobbet med å skrive og endre HCL-kode, feilsøke og rette tilgangsrettigheter i AWS IAM, samt sette opp og rydde opp etter en skyserver.
