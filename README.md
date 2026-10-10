@@ -15,4 +15,3 @@ Prosjektet er utviklet og kjørt i et **WSL (Ubuntu Linux) -miljø på en Window
 * **WSL / Ubuntu Linux** og Bash-terminalen
 * **Git & GitHub** for versjonskontroll
 
-*For en dypere forklaring av prosessen og feilsøkingen som ble gjort, sjekk ut [JOURNAL.md](./JOURNAL.md).*
