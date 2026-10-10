@@ -15,17 +15,15 @@ Rulle ut en ekte, virtuell server (EC2-instans) i AWS via kode.
 
 **Miljø oppsett:**
 
-Installert Terraform CLI (v1.16.0) i WSL. Løst en nettverksblokkering (Error 429) ved å hente GPG-nøkler via `curl` i stedet for `wget`.
+Installert Terraform CLI (v1.16.0) i WSL. Løst en nettverksblokkering (Error 429) ved å hente GPG-nøkler med "curl" i stedet for "wget".
 
 **Lokal testing:**
 
-Skrevet en `main.tf` som opprettet en lokal fil (`local_file`). Testet multilinje-syntaks (`<<EOT`) for å endre innholdet og erfare hvordan Terraform destruerer og gjenoppretter ressurser (`-/+ destroy and then create replacement`).
+Skrev en main.tf-fil som opprettet en lokal fil med Terraform. Testet også hvordan man kan endre filinnholdet med flerlinsjesyntaks (<<EOT), og lærte hvordan Terraform erstatter ressurser når konfigurasjonen endres.
 
 **AWS-integrasjon og feilsøking:**
 
-Koblet terminalen opp mot AWS ved bruk av miljøvariabler for Access Keys (`AWS_ACCESS_KEY_ID` og `AWS_SECRET_ACCESS_KEY`).
-Endret koden til å rulle ut en EC2-instans i regionen `eu-north-1` (Stockholm).
-
+Koblet terminalen til AWS ved hjelp av miljøvariabler for tilgangsnøkler. Endret Terraform-koden for å opprette en EC2-instans i AWS-regionen Stockholm (eu-north-1).
 
 **Feilsøking:**  Rettet feil knyttet til en ugyldig AMI-ID ved å oppdatere til en gyldig Ubuntu 24.04 LTS-versjon.   
 Jeg løste også tilgangsproblemer i AWS IAM ved å oppdatere nødvendige rettigheter.
