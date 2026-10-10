@@ -1,11 +1,9 @@
 Tirsdag 01/09/2026
 
-Arbeids journal for i dag:
-
-I dag lastet jeg ned Terra
+## Arbeids journal
 
 
-1. Mål for dagen
+### 1. Mål for dagen
 
 Forstå konseptet Infrastructure as Code (IaC) og forskjellen på skyleverandører (AWS/Azure) og automasjonsverktøy (Terraform).
 Sette opp et fungerende utviklingsmiljø med Terraform på egen maskin.
@@ -13,16 +11,18 @@ Gjennomføre en komplett livssyklus (opprette, endre, slette) for en lokal ressu
 Rulle ut en ekte, virtuell server (EC2-instans) i AWS via kode.
 
 
-2. Utført arbeid & Framgang
+### 2. Utført arbeid & Framgang
 
-Miljø oppsett:
+**Miljø oppsett:**
 
 Installert Terraform CLI (v1.16.0) i WSL. Løst en nettverksblokkering (Error 429) ved å hente GPG-nøkler via `curl` i stedet for `wget`.
 
-Lokal testing:
+**Lokal testing:**
+
 Skrevet en `main.tf` som opprettet en lokal fil (`local_file`). Testet multilinje-syntaks (`<<EOT`) for å endre innholdet og erfare hvordan Terraform destruerer og gjenoppretter ressurser (`-/+ destroy and then create replacement`).
 
-AWS-integrasjon og feilsøking:
+**AWS-integrasjon og feilsøking:**
+
 Koblet terminalen opp mot AWS ved bruk av miljøvariabler for Access Keys (`AWS_ACCESS_KEY_ID` og `AWS_SECRET_ACCESS_KEY`).
 Endret koden til å rulle ut en EC2-instans i regionen `eu-north-1` (Stockholm).
 
@@ -32,17 +32,18 @@ Jeg løste også tilgangsproblemer i AWS IAM ved å oppdatere nødvendige rettig
 
 **Oppsett av skyserver:**   Etter at feilene var rettet, kjørte koden som forventet, og jeg fikk opprettet en skyserver i AWS.  
 
-3. Viktige verktøy og kommandoer lært i dag
-terraform init: Klargjør mappen og laster ned plugins/providers.
-terraform plan: Viser en trygg forhåndsvisning av hva koden vil gjøre.
-terraform apply: Utfører koden og bygger infrastrukturen i praksis.
-terraform destroy: Sletter alt koden har bygget og stopper eventuelle kostnader.
-terraform.tfstate: Lært at dette er "hjernen" (state-filen) til Terraform som man aldri må slette manuelt.
+### 3. Viktige verktøy og kommandoer lært i dag
 
-4. Veien videre / Neste steg
+terraform init: Klargjør mappen og laster ned plugins/providers.  
+terraform plan: Viser en trygg forhåndsvisning av hva koden vil gjøre.  
+terraform apply: Utfører koden og bygger infrastrukturen i praksis.  
+terraform destroy: Sletter alt koden har bygget og stopper eventuelle kostnader.  
+terraform.tfstate: Lært at dette er "hjernen" (state-filen) til Terraform som man aldri må slette manuelt.  
 
-Koble WSL-terminalen opp mot en ekte AWS-konto ved hjelp av miljøvariabler for Access Keys (AWS_ACCESS_KEY_ID og AWS_SECRET_ACCESS_KEY).
-Gjøre om main.tf fra å lage en lokal tekstfil til å rulle ut en ekte, virtuell Linux-server (EC2-instans) i AWS sitt datasenter i Stockholm.
+## 4. Veien videre / Neste steg
+
+Koble WSL-terminalen opp mot en ekte AWS-konto ved hjelp av miljøvariabler for Access Keys (AWS_ACCESS_KEY_ID og AWS_SECRET_ACCESS_KEY).  
+Gjøre om main.tf fra å lage en lokal tekstfil til å rulle ut en ekte, virtuell Linux-server (EC2-instans) i AWS sitt datasenter i Stockholm.  
 
 Sammendrag:
 Jeg har installert og lært det grunnleggende i Terraform gjennom WSL-terminalen. Jeg har også jobbet med å skrive og endre HCL-kode, feilsøke og rette tilgangsrettigheter i AWS IAM, samt sette opp og rydde opp etter en skyserver.
