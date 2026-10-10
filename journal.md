@@ -25,10 +25,14 @@ Skrev en main.tf-fil som opprettet en lokal fil med Terraform. Testet også hvor
 
 Koblet terminalen til AWS ved hjelp av miljøvariabler for tilgangsnøkler. Endret Terraform-koden for å opprette en EC2-instans i AWS-regionen Stockholm (eu-north-1).
 
-**Feilsøking:**  Rettet feil knyttet til en ugyldig AMI-ID ved å oppdatere til en gyldig Ubuntu 24.04 LTS-versjon.   
+**Feilsøking:**  
+
+Rettet feil knyttet til en ugyldig AMI-ID ved å oppdatere til en gyldig Ubuntu 24.04 LTS-versjon.   
 Jeg løste også tilgangsproblemer i AWS IAM ved å oppdatere nødvendige rettigheter.
 
-**Oppsett av skyserver:**   Etter at feilene var rettet, kjørte koden som forventet, og jeg fikk opprettet en skyserver i AWS.  
+**Oppsett av skyserver:**   
+
+Etter at feilene var rettet, kjørte koden som forventet, og jeg fikk opprettet en skyserver i AWS.  
 
 ### 3. Viktige verktøy og kommandoer lært i dag
 
